@@ -59,7 +59,7 @@ The game utilizes the Iterative Deepening algorithm to find the optimal path. It
 
 ## Screenshots
 
-![Game Screenshot](screenshots/game.png)
+![Game Screenshot](Test.png)
 
 *Add more screenshots here to showcase different stages of the game.*
 
