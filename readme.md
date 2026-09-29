@@ -1,72 +1,57 @@
-# Prolog Game: Iterative Deepening Path Finder
+# Labyrinth Game
 
-Welcome to the Prolog Game project! This project is a game implemented in Prolog where you design a 5 x 5 matrix containing obstacles, a final position, and an initial position. The goal is to find the optimal path from the initial position to the final position using Iterative Deepening, and the result is visually represented in a Graphical User Interface (GUI).
+A Prolog pathfinding project that searches obstacle-filled grids using iterative deepening and visualizes the path.
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Features](#features)
-- [Getting Started](#getting-started)
-- [How to Play](#how-to-play)
-- [Algorithm](#algorithm)
-- [Screenshots](#screenshots)
-- [Contributing](#contributing)
-- [License](#license)
+**Status:** Search-algorithm project  
+**Tools:** SWI-Prolog · Python · PySwip
 
-## Introduction
+## What this project does
 
-The Prolog Game project is a fun and challenging game where you navigate through a matrix filled with obstacles to reach the final position. The game utilizes Prolog for its logic and Iterative Deepening to find the optimal path. The graphical representation of the game makes it enjoyable and engaging.
+- Define starts, goals, and obstacles in maze files.
+- Run iterative deepening over multiple included maze sizes.
+- Use a Python/PySwip entry point and Prolog utilities for search and display.
 
-## Features
+## How it works
 
-- **Matrix Design**: Create a custom 5 x 5 matrix with obstacles, a final position, and an initial position.
-- **User Input**: Input the initial position through user interaction.
-- **Iterative Deepening**: Utilize the Iterative Deepening algorithm to find the optimal path to the final position.
-- **Graphical User Interface**: Visualize the game and the path finding results in a user-friendly GUI.
+```mermaid
+flowchart LR
+  N0["Maze definition"]
+  N1["Increasing depth limit"]
+  N2["Path search"]
+  N3["Visualization"]
+  N0 --> N1
+  N1 --> N2
+  N2 --> N3
+```
 
-## Getting Started
+Maze definition → Increasing depth limit → Path search → Visualization
 
-To get started with the Prolog Game, follow these steps:
+## Repository guide
 
-1. Clone the repository:
+- [`main.py`](main.py)
+- [`iterative_deepening.pl`](iterative_deepening.pl)
+- [`labyrinth/loader.pl`](labyrinth/loader.pl)
+- [`labyrinth/actions.pl`](labyrinth/actions.pl)
+- [`Test.png`](Test.png)
 
-    ```bash
-    git clone https://github.com/your-username/prolog-game.git
-    ```
+## Setup and use
 
-2. Ensure you have Prolog installed on your machine.
+Install SWI-Prolog and a compatible PySwip package in a Python environment. Review the selected maze in `labyrinth/loader.pl`, then run the checked-in entry point:
 
-3. Run the game script:
+```sh
+python main.py
+```
 
-    ```bash
-    swipl game.pl
-    ```
+## Current limits
 
-4. Follow the on-screen instructions to design the matrix and provide the initial position.
+The earlier README named game.pl, which is not in the tree. This repository also includes teaching examples; their presence is not a claim of a separate finished application.
 
-## How to Play
+## Screenshot
 
-1. Design the matrix by specifying the positions of obstacles, the final position, and the initial position.
+![Pathfinding project screenshot](Test.png)
 
-2. Input the initial position when prompted.
+## Portfolio
 
-3. Watch as the Iterative Deepening algorithm finds the optimal path to the final position.
+[Project details and related work](https://azka1212.github.io/Azka-AI-Developer/#projects)
 
-4. Explore the graphical representation of the game in the GUI.
-
-## Algorithm
-
-The game utilizes the Iterative Deepening algorithm to find the optimal path. Iterative Deepening is a depth-first search algorithm with an increasing depth limit. It ensures an optimal solution while avoiding the drawbacks of pure depth-first search.
-
-## Screenshots
-
-![Game Screenshot](Test.png)
-
-*Add more screenshots here to showcase different stages of the game.*
-
-## Contributing
-
-If you would like to contribute to the project, feel free to submit pull requests. Contributions are always welcome!
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+> Documentation was checked against the repository source. Unless explicitly stated, setup commands describe the intended entry points and were not executed as part of this documentation update.
